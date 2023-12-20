@@ -1,10 +1,13 @@
 import streamlit as st
 from sidebar import show_sidebar
+import pandas as pd
+import plotly.express as px
+from plots import education_plot, experience_plot
 
 
 def main():
     show_sidebar()
-    
+
     st.title("Michael Racanelli")
 
     st.header("About Me")
@@ -12,6 +15,7 @@ def main():
         "I am a data scientist passionate about using data to derive meaningful insights and solve complex problems. "
         "With a background in [Your Relevant Education/Experience], I specialize in [Your Key Areas]."
     )
+
 
     st.header("Skills")
     col1, col2 = st.columns(2)
@@ -22,48 +26,57 @@ def main():
         st.write("- Data Cleaning and Preprocessing")
         st.write("- Exploratory Data Analysis (EDA)")
         st.write("- Machine Learning: Regression, Classification, Clustering")
-        st.write("- Data Visualization: Matplotlib, Seaborn, Plotly")
+        st.write("- Data Visualization: Matplotlib, Seaborn, Bokeh")
 
     with col2:
         st.subheader("Tools and Frameworks")
-        st.write("- Pandas, NumPy, Scikit-Learn")
+        st.write("- Pandas, NumPy, Scikit-Learn, TensorFlow, Spark")
         st.write("- Jupyter Notebooks")
-        st.write("- SQL")
+        st.write("- SQL, MongoDB")
         st.write("- Git, GitHub")
-        st.write("- Streamlit for Data Apps")
+        st.write("- Streamlit, Panel, Flask")
+
 
     st.header("Education")
-    st.text("Data Science Certification | September 2022 – December 2023")
-    st.text("University of Toronto/Waterloo")
-    st.markdown("- Data analysis, statistics, visualization, and machine learning using Python")
+    # display education plot
+    st.plotly_chart(education_plot())
 
-    st.text("Master of Science, Thesis-based, Physiology/Pharmacology | September 2016 – October 2019")
-    st.text("Western University, London, Ontario")
-    st.markdown("- Examined YAP as a mediator of fibrotic activity and melanoma metastasis")
-
-    st.text("Bachelor of Medical Science (Honours) | September 2011 - May 2016")
-    st.text("Western University, London, Ontario")
-    st.markdown("- Western University Scholarship of Excellence, 2011")
-    st.markdown("- Dean’s Honour List, 2013, 2016")
 
     st.header("Work Experience")
-    st.text("Clinical Data Analyst, Contract Full-time | April 2023 – present")
-    st.text("Bayer Inc, Mississauga, Ontario")
-    st.markdown("- Explored patient data using jupyter notebooks on large data platforms such as Science @ Scale")
-    # Add more work experience details in a similar manner
+   # display experience plot
+    st.plotly_chart(experience_plot())
 
-    st.header("Publications")
-    st.markdown("[Shi-Wen, X., Racanelli, M., Ali, A., Simon, A., Quesnel, K., Stratton, R. J., & Leask, A. (2021). Verteporfin inhibits the persistent fibrotic phenotype of lesional scleroderma dermal fibroblasts. Journal of cell communication and signaling, 15(1), 71–80.](https://doi.org/10.1007/s12079-020-00596-x)")
-    # Add more publication details in a similar manner
 
     st.header("Licenses & Certifications")
-    st.text("Data Science Certification | December 2023 | University of Waterloo/Toronto")
-    # Add more certification details in a similar manner
+    # Certification data
+    certifications_data = [
+        ["Data Science Certification", "December 2023", "University of Waterloo/Toronto"],
+        ["Machine Learning, Data Science and Deep Learning with Python", "November 2021", "Udemy"],
+        ["Complete Python Developer in 2021: Zero to Mastery", "September 2021", "Udemy"],
+        ["Study Designs in Epidemiology", "January 2021", "Coursera"],
+        ["AI for Everyone", "November 2019", "Coursera"],
+    ]
+    # Create a DataFrame with column names
+    df_certifications = pd.DataFrame(certifications_data, columns=["Title", "Year", "Institution"])
+    # Display the table with customized column names and without index
+    st.table(df_certifications)
+    
+
+    st.header("Publications")
+
+    st.write("Shi-Wen, X., Racanelli, M., Ali, A., Simon, A., Quesnel, K., Stratton, R. J., & Leask, A. (2021). *Verteporfin inhibits the persistent fibrotic phenotype of lesional scleroderma dermal fibroblasts.* Journal of cell communication and signaling, 15(1), 71–80.")
+    st.markdown("[https://doi.org/10.1007/s12079-020-00596-x](https://doi.org/10.1007/s12079-020-00596-x)")
+
+    st.write("Racanelli M, (2019). *YAP-mediated mechanotransduction promotes fibrotic activity.* Electronic Thesis and Dissertation Repository. 6283.")
+    st.markdown("[https://ir.lib.uwo.ca/etd/6283](https://ir.lib.uwo.ca/etd/6283)")
+
+    st.write("Hutchenreuther, J., Vincent, K., Norley, C., Racanelli, M., Gruber, S. B., Johnson, T. M., Fullen, D. R., Raskin, L., Perbal, B., Holdsworth, D. W., Postovit, L. M., & Leask, A. (2018). *Activation of cancer-associated fibroblasts is required for tumor neovascularization in a murine model of melanoma.* Matrix biology : journal of the International Society for Matrix Biology, 74, 52–61.")
+    st.markdown("[https://doi.org/10.1016/j.matbio.2018.06.003](https://doi.org/10.1016/j.matbio.2018.06.003)")
+
 
     st.header("Volunteer Experience")
     st.text("Health Partners International of Canada | July 2014 | Mississauga, Ontario")
-    st.markdown("- Reworked the warehouse floor, creating a new system of organizing medical supplies")
-    # Add more volunteer experience details in a similar manner
+
 
     st.header("Interests")
     st.markdown("- Machine Learning: Passionate about how deep learning with big data is changing every industry")
