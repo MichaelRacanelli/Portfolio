@@ -6,26 +6,61 @@ def education_plot():
     # data for education
     education_data = [
         {
-            "Degree": "Continuing Studies", 
+            "Title": "Data Science Certificate",
+            "Degree": "Certificate", 
             "Program": "Data Science", 
             "School": "University of Toronto/Waterloo", 
             "Start Year": "2022-09-01", 
             "End Year": "2023-12-18"
-            },
+        },
         {
+            "Title": "Master of Science",
             "Degree": "Masters", 
             "Program": "Physiology/Pharmacology", 
             "School": "Western University", 
             "Start Year": "2016-09-01", 
             "End Year": "2019-10-01"
-            },
+        },
         {
+            "Title": "Bachelor of Medical Science (Honours)",
             "Degree": "Undergraduate", 
             "Program": "Biomedical Sciences", 
             "School": "Western University", 
             "Start Year": "2011-09-01", 
             "End Year": "2016-05-01"
+        },
+        {
+            "Title": "AI for Everyone",
+            "Degree": "Certificate",
+            "Program": "Data Science",
+            "School": "Coursera",
+            "Start Year": "2019-11-07",
+            "End Year": "2019-11-30"
+        },
+        {
+            "Title": "Study Designs in Epidemiology",
+            "Degree": "Certificate",
+            "Program": "Biomedical Sciences",
+            "School": "Coursera",
+            "Start Year": "2021-01-01",
+            "End Year": "2021-01-31"
+        },
+        {
+            "Title": "Complete Python Developer in 2021: Zero to Mastery",
+            "Degree": "Certificate",
+            "Program": "Data Science",
+            "School": "Udemy",
+            "Start Year": "2021-05-01",
+            "End Year": "2021-09-16"
             },
+        {
+            "Title": "Machine Learning, Data Science and Deep Learning with Python",
+            "Degree": "Certificate",
+            "Program": "Data Science",
+            "School": "Udemy",
+            "Start Year": "2021-09-17",
+            "End Year": "2021-11-24"
+        }
         ]
 
     # Convert the data to a Pandas DataFrame
@@ -35,16 +70,21 @@ def education_plot():
     df_education["Start Year"] = pd.to_datetime(df_education["Start Year"])
     df_education["End Year"] = pd.to_datetime(df_education["End Year"], errors='coerce')  # 'coerce' handles the 'present' case
 
+    # Specify the order for the legend items
+    legend_order = df_education.sort_values("End Year")["Title"]
+    
     # Create a horizontal bar chart using Plotly Express with timeline
     fig = px.timeline(
         df_education,
         x_start="Start Year",
         x_end="End Year",
         y="Degree",
-        color="School",
+        color="Title",
         # title="Timeline",
+        category_orders={"Title": legend_order},  # Set the order of legend items
     )
-
+    # Adjust the legend position
+    fig.update_layout(legend=dict(x=-0.2, y=-0.2, traceorder='normal', orientation='h'))
     # Customize the layout
     fig.update_layout(xaxis_title="Year")
     # Customize x-axis date ticks
@@ -138,6 +178,8 @@ def experience_plot():
     df_work_experience["Start Date"] = pd.to_datetime(df_work_experience["Start Date"], errors='coerce')
     df_work_experience["End Date"] = pd.to_datetime(df_work_experience["End Date"], errors='coerce')  # 'coerce' handles the 'present' case
 
+    # Specify the order for the legend items
+    legend_order = df_work_experience.sort_values("End Date")["Job Title"]
     # Create a horizontal bar chart using Plotly Express with timeline
     fig = px.timeline(
         df_work_experience,
@@ -146,10 +188,12 @@ def experience_plot():
         y="Company",
         color="Job Title",
         # title="Timeline",
+        category_orders={"Job Title": legend_order},  # Set the order of legend items
     )
 
     # Customize the layout
     fig.update_layout(xaxis_title="Year")
+    fig.update_layout(legend=dict(x=-0.2, y=-0.2, traceorder='normal', orientation='h'))
     # Customize x-axis date ticks
     fig.update_xaxes(
         dtick="M24",  # Set tick interval to every 12 months (1 year)

@@ -35,7 +35,7 @@ def main():
 
 
     st.header("Education")
-    # display education plot
+    # display education plot 
     st.plotly_chart(education_plot(), use_container_width=True)
 
 
