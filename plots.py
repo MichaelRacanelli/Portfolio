@@ -81,7 +81,7 @@ def education_plot():
         y="Degree",
         color="Title",
         # title="Timeline",
-        category_orders={"Title": legend_order},  # Set the order of legend items
+        category_orders={"Title": legend_order[::-1]},  # Set the order of legend items in reverse
     )
     # Adjust the legend position
     fig.update_layout(legend=dict(x=-0.2, y=-0.2, traceorder='normal', orientation='h'))
@@ -92,7 +92,7 @@ def education_plot():
         dtick="M24",  # Set tick interval to every 12 months (1 year)
         tickformat="%Y",  # Format the tick labels as year only
     )
-    return fig
+    return fig, df_education
 
 def experience_plot():
     # Work experience data
@@ -188,7 +188,7 @@ def experience_plot():
         y="Company",
         color="Job Title",
         # title="Timeline",
-        category_orders={"Job Title": legend_order},  # Set the order of legend items
+        category_orders={"Job Title": legend_order[::-1]},  # Set the order of legend items
     )
 
     # Customize the layout
@@ -199,4 +199,4 @@ def experience_plot():
         dtick="M24",  # Set tick interval to every 12 months (1 year)
         tickformat="%Y",  # Format the tick labels as year only
     )
-    return fig
+    return fig, df_work_experience
