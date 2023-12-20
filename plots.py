@@ -5,10 +5,28 @@ import plotly.express as px
 def education_plot():
     # data for education
     education_data = [
-        {"Degree": "Continuing Studies", "Program": "Data Science", "School": "University of Toronto/Waterloo", "Start Year": "2022-09-01", "End Year": "2023-12-18"},
-        {"Degree": "Masters", "Program": "Physiology/Pharmacology", "School": "Western University", "Start Year": "2016-09-01", "End Year": "2019-10-01"},
-        {"Degree": "Undergraduate", "Program": "Biomedical Sciences", "School": "Western University", "Start Year": "2011-09-01", "End Year": "2016-05-01"},
-    ]
+        {
+            "Degree": "Continuing Studies", 
+            "Program": "Data Science", 
+            "School": "University of Toronto/Waterloo", 
+            "Start Year": "2022-09-01", 
+            "End Year": "2023-12-18"
+            },
+        {
+            "Degree": "Masters", 
+            "Program": "Physiology/Pharmacology", 
+            "School": "Western University", 
+            "Start Year": "2016-09-01", 
+            "End Year": "2019-10-01"
+            },
+        {
+            "Degree": "Undergraduate", 
+            "Program": "Biomedical Sciences", 
+            "School": "Western University", 
+            "Start Year": "2011-09-01", 
+            "End Year": "2016-05-01"
+            },
+        ]
 
     # Convert the data to a Pandas DataFrame
     df_education = pd.DataFrame(education_data)
@@ -24,7 +42,7 @@ def education_plot():
         x_end="End Year",
         y="Degree",
         color="School",
-        title="Timeline",
+        # title="Timeline",
     )
 
     # Customize the layout
@@ -42,76 +60,75 @@ def experience_plot():
         {
             "Job Title": "Clinical Data Analyst",
             "Employment Type": "Contract Full-time",
-            "Start Date": "April 2023",
-            "End Date": "April 2024",
+            "Start Date": "2023-04",
+            "End Date": "2024-04",
             "Company": "Bayer Inc",
             "Location": "Mississauga, Ontario",
         },
         {
             "Job Title": "Scientific Analyst QA",
             "Employment Type": "Permanent Full-time",
-            "Start Date": "May 2022",
-            "End Date": "August 2022",
+            "Start Date": "2022-05",
+            "End Date": "2022-08",
             "Company": "BenchSci",
             "Location": "Toronto, Ontario",
         },
         {
             "Job Title": "Local Study Associate",
             "Employment Type": "Contract Full-time",
-            "Start Date": "February 2020",
-            "End Date": "April 2021",
+            "Start Date": "2020-02",
+            "End Date": "2021-04",
             "Company": "Bayer Inc",
             "Location": "Mississauga, Ontario",
         },
         {
             "Job Title": "Laboratory Research Assistant and Thesis Student",
             "Employment Type": "Full-time",
-            "Start Date": "September 2016",
-            "End Date": "June 2019",
+            "Start Date": "2016-09",
+            "End Date": "2019-06",
             "Company": "Western University",
             "Location": "London, Ontario",
         },
         {
             "Job Title": "Teaching Assistant",
             "Employment Type": "Part-time",
-            "Start Date": "September 2017",
-            "End Date": "April 2018",
+            "Start Date": "2017-09",
+            "End Date": "2018-04",
             "Company": "Western University",
             "Location": "London, Ontario",
         },
         {
             "Job Title": "Dental School Simulation Clinic Supervisor",
             "Employment Type": "Part-time",
-            "Start Date": "December 2016",
-            "End Date": "February 2018",
+            "Start Date": "2016-12",
+            "End Date": "2018-02",
             "Company": "Western University",
             "Location": "London, Ontario",
         },
         {
             "Job Title": "Collection Clerk",
             "Employment Type": "Full-time",
-            "Start Date": "May 2015",
-            "End Date": "August 2015",
+            "Start Date": "2015-05",
+            "End Date": "2015-08",
             "Company": "Bayer Inc",
             "Location": "Mississauga, Ontario",
         },
         {
             "Job Title": "Medical Operations Business Associate",
             "Employment Type": "Full-time",
-            "Start Date": "May 2013",
-            "End Date": "August 2013",
+            "Start Date": "2013-05",
+            "End Date": "2013-08",
             "Company": "GlaxoSmithKline",
             "Location": "Mississauga, Ontario",
         },
         {
             "Job Title": "Medical Operations Business Associate",
             "Employment Type": "Full-time",
-            "Start Date": "May 2012",
-            "End Date": "August 2012",
+            "Start Date": "2012-05",
+            "End Date": "2012-08",
             "Company": "GlaxoSmithKline",
             "Location": "Mississauga, Ontario",
         },
-        # Add more work experience entries in a similar manner
     ]
 
     # Convert the data to a Pandas DataFrame
@@ -128,7 +145,7 @@ def experience_plot():
         x_end="End Date",
         y="Company",
         color="Job Title",
-        title="Timeline",
+        # title="Timeline",
     )
 
     # Customize the layout

@@ -8,12 +8,9 @@ from plots import education_plot, experience_plot
 def main():
     show_sidebar()
 
-    st.title("Michael Racanelli")
-
-    st.header("About Me")
+    st.title("About Me")
     st.write(
-        "I am a data scientist passionate about using data to derive meaningful insights and solve complex problems. "
-        "With a background in [Your Relevant Education/Experience], I specialize in [Your Key Areas]."
+        "Hello! I'm Michael, a biomedical research scientist who completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. Afterwards, I gained experience in the Pharmaceutical industry in Phase 4 clinical trial management. I then decided to pursue my passion and development, independently learning coding with python and machine learning libraries such as Tensorflow and Keras for the purpose of analyzing clinical data to find new trends and insights. Later, I joined BenchSci as a Scientific Analyst to assist in reforming their QA workflow to improve oversight and reporting. Now, I am looking to combine all my skills to use AI and data analytics in a clinical settings. Currently, I am enrolled in a Data Science Certificate Program with the University of Toronto and the University of Waterloo. I am looking forward to what comes next, so please don't hesitate to reach out!"
     )
 
 
@@ -39,12 +36,12 @@ def main():
 
     st.header("Education")
     # display education plot
-    st.plotly_chart(education_plot())
+    st.plotly_chart(education_plot(), use_container_width=True)
 
 
     st.header("Work Experience")
    # display experience plot
-    st.plotly_chart(experience_plot())
+    st.plotly_chart(experience_plot(), use_container_width=True)
 
 
     st.header("Licenses & Certifications")
@@ -60,7 +57,7 @@ def main():
     df_certifications = pd.DataFrame(certifications_data, columns=["Title", "Year", "Institution"])
     # Display the table with customized column names and without index
     st.table(df_certifications)
-    
+
 
     st.header("Publications")
 
