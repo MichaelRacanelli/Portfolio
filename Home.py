@@ -1,7 +1,8 @@
 import streamlit as st
-from sidebar import show_sidebar
 import pandas as pd
 import plotly.express as px
+
+from sidebar import show_sidebar
 from plots import education_plot, experience_plot
 # from chatgpt import chat_gpt
 
@@ -9,9 +10,15 @@ def main():
     show_sidebar()
 
     st.title("About Me")
-    st.write(
-        "Hello! I'm Michael, a biomedical research scientist who completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. Afterwards, I gained experience in the Pharmaceutical industry in Phase 4 clinical trial management. I then decided to pursue my passion and development, independently learning coding with python and machine learning libraries such as Tensorflow and Keras for the purpose of analyzing clinical data to find new trends and insights. Later, I joined BenchSci as a Scientific Analyst to assist in reforming their QA workflow to improve oversight and reporting. Now, I am looking to combine all my skills to use AI and data analytics in a clinical settings. Currently, I am enrolled in a Data Science Certificate Program with the University of Toronto and the University of Waterloo. I am looking forward to what comes next, so please don't hesitate to reach out!"
-    )
+    st.write("""
+        Hello! I'm Michael, a biomedical research scientist who completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. 
+        Afterwards, I gained experience in the Pharmaceutical industry in Phase 4 clinical trial management. 
+        I then decided to pursue my passion and development, independently learning coding with python and machine learning libraries such as Tensorflow and Keras for the purpose of analyzing clinical data. 
+
+        Afterwards, I enrolled and completed a Data Science Certificate Program with the University of Toronto and the University of Waterloo to really develop my skills as a data scientist. 
+        In parallel, I joined Bayer as a Clinical Data Analyst to gain some real world experience in coding with python in a clinical setting for data analysis and visualization, where I developed data visualization applications and pipelines. 
+        I am looking forward to what comes next, so please don't hesitate to reach out!
+    """)
 
 
     st.header("Skills")

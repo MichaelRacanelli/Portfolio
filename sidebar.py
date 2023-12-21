@@ -21,9 +21,9 @@ def download_pdf_resume():
 def show_sidebar():
     with st.sidebar:
         st.title("Michael Racanelli")
-        st.image("profile_pic.jpg")
+        st.image("./images/profile_pic.jpg")
         st.header("Contact Information")
-        st.markdown("Location: Oakville, ON")
+        st.markdown("Location: Oakville, ON, Canada")
         st.markdown("Phone: +1 519 281 1284")
         st.markdown("Email: [m.v.racanelli@gmail.com](mailto:m.v.racanelli@gmail.com)")
         st.markdown("[LinkedIn](https://www.linkedin.com/in/michaelvincentracanelli/)")
