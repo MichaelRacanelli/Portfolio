@@ -3,7 +3,7 @@ from sidebar import show_sidebar
 import pandas as pd
 import plotly.express as px
 from plots import education_plot, experience_plot
-
+# from chatgpt import chat_gpt
 
 def main():
     show_sidebar()
@@ -35,40 +35,10 @@ def main():
 
 
     st.header("Education")
-    fig, table = education_plot()
-    # display education plot 
-    st.plotly_chart(fig, use_container_width=True)
-    # Button to show/hide details
-    if st.button("Show Details", key='education'):
-        # Display the DataFrame as a table
-        st.button("Hide",key='clear_education')
-        st.table(table)
-
+    education_plot()
 
     st.header("Work Experience")
-    fig, table = experience_plot()
-   # display experience plot
-    st.plotly_chart(fig, use_container_width=True)
-    if st.button("Show Details", key='experience'):
-        # Display the DataFrame as a table
-        st.button("Hide",key='clear_experience')
-        st.table(table)
-        
-
-
-    # st.header("Licenses & Certifications")
-    # # Certification data
-    # certifications_data = [
-    #     ["Data Science Certification", "December 2023", "University of Waterloo/Toronto"],
-    #     ["Machine Learning, Data Science and Deep Learning with Python", "November 2021", "Udemy"],
-    #     ["Complete Python Developer in 2021: Zero to Mastery", "September 2021", "Udemy"],
-    #     ["Study Designs in Epidemiology", "January 2021", "Coursera"],
-    #     ["AI for Everyone", "November 2019", "Coursera"],
-    # ]
-    # # Create a DataFrame with column names
-    # df_certifications = pd.DataFrame(certifications_data, columns=["Title", "Year", "Institution"])
-    # # Display the table with customized column names and without index
-    # st.table(df_certifications)
+    experience_plot()
 
 
     st.header("Publications")
