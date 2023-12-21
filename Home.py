@@ -30,7 +30,7 @@ def main():
         st.write("- Data Cleaning and Preprocessing")
         st.write("- Exploratory Data Analysis (EDA)")
         st.write("- Machine Learning: Regression, Classification, Clustering")
-        st.write("- Data Visualization: Matplotlib, Seaborn, Bokeh")
+        st.write("- Data Visualization: Matplotlib, Seaborn, Bokeh, Plotly")
 
     with col2:
         st.subheader("Tools and Frameworks")
