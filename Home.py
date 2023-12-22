@@ -9,7 +9,8 @@ from plots import education_plot, experience_plot
 def main():
     show_sidebar()
 
-    st.title("About Me")
+    st.title("Michael Racanelli")
+    st.header("About Me")
     st.write("""
         Hello! I'm Michael, a biomedical research scientist who completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. 
         Afterwards, I gained experience in the Pharmaceutical industry in Phase 4 clinical trial management. 
