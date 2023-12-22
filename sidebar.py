@@ -21,6 +21,7 @@ def download_pdf_resume():
 def show_sidebar():
     with st.sidebar:
         st.image("./images/profile_pic.jpg")
+        st.header("Michael Racanelli")
         st.header("Contact Information")
         st.markdown("Location: Oakville, ON, Canada")
         st.markdown("Phone: +1 519 281 1284")
