@@ -8,10 +8,10 @@ from plots import education_plot, experience_plot
 
 def main():
     show_sidebar()
+    st.title("Michael Racanelli")
     tab1, tab2 = st.tabs(["Home", "Projects"])
 
     with tab1:
-        st.title("Michael Racanelli")
         st.header("About Me")
         st.write("""
             Hello! I'm Michael, a biomedical research scientist who completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. 
