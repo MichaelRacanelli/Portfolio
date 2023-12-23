@@ -4,12 +4,12 @@ import plotly.express as px
 
 from sidebar import show_sidebar
 from plots import education_plot, experience_plot
-# from chatgpt import chat_gpt
+from chatgpt import chat_gpt
 
 def main():
     show_sidebar()
     st.title("Michael Racanelli")
-    tab1, tab2 = st.tabs(["Home", "Projects"])
+    tab1, tab2, tab3 = st.tabs(["Home", "Projects","chatGPT"])
 
     with tab1:
         st.header("About Me")
@@ -129,5 +129,27 @@ def main():
             st.markdown('[Github Repository](https://github.com/MichaelRacanelli/Lung_Cancer)')
         # with col3:
         #     st.image("", use_column_width=True)
+            
+    with tab3:
+        st.title("ChatGPT CV Assistant")
+
+        # Your CV information
+        cv_info = """
+        Your CV information goes here.
+        Include details about your education, experience, skills, etc.
+        """
+
+
+        # User input for the chat
+        user_question = st.text_input("Ask a question about myself")
+
+        if st.button("Ask"):
+            # Get the answer using ChatGPT
+            answer = chat_gpt(user_question, cv_info)
+
+            # Display the answer
+            st.text(f"Answer: {answer}")
+
+
 if __name__ == "__main__":
     main()
