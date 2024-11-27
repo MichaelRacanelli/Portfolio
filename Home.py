@@ -13,8 +13,6 @@ def main():
     with tab1:
         st.header("About Me")
         st.write("""
-            Hello! I'm Michael, a data scientist. 
-            
             I completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. 
             Afterwards, I gained industry experience managing Phase 4 clinical studies. 
             Then I pursued development, learning to code in python and practiced machine learning, specializing in clinical data. 
