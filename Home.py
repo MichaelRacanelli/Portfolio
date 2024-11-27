@@ -21,8 +21,7 @@ def main():
 
             Afterwards, I enrolled and completed a Data Science Certificate Program at the University of Toronto School of Continuing Studies. 
             In parallel, I joined Bayer as a Clinical Data Analyst to gain industry experience for clinical data science. 
-            Here I combined my clinical health industry experience with my skills as a developer.
-            I am looking forward to what comes next, so please don't hesitate to reach out!
+            Here I leverage my clinical health knowledge and industry experience along with my skills as a data science developer to transform data, create tools/visualizations, and answer questions.            
         """)
 
 
