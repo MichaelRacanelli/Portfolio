@@ -10,7 +10,7 @@ def main():
     tab1, tab2 = st.tabs(["Home", "Projects"])
 
     with tab1:
-        st.header("About Me")
+        st.title("About Me")
         st.write("""
             I completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. 
             Afterwards, I gained industry experience managing Phase 4 clinical studies. 
