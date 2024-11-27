@@ -13,12 +13,15 @@ def main():
     with tab1:
         st.header("About Me")
         st.write("""
-            Hello! I'm Michael, a biomedical research scientist who completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. 
-            Afterwards, I gained experience in the Pharmaceutical industry in Phase 4 clinical trial management. 
-            I then decided to pursue my passion and development, independently learning coding with python and machine learning libraries such as Tensorflow and Keras for the purpose of analyzing clinical data. 
+            Hello! I'm Michael, a data scientist. 
+            
+            I completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. 
+            Afterwards, I gained industry experience managing Phase 4 clinical studies. 
+            Then I pursued development, learning to code in python and practiced machine learning, specializing in clinical data. 
 
-            Afterwards, I enrolled and completed a Data Science Certificate Program with the University of Toronto and the University of Waterloo to really develop my skills as a data scientist. 
-            In parallel, I joined Bayer as a Clinical Data Analyst to gain some real world experience in coding with python in a clinical setting for data analysis and visualization, where I developed data visualization applications and pipelines. 
+            Afterwards, I enrolled and completed a Data Science Certificate Program at the University of Toronto School of Continuing Studies. 
+            In parallel, I joined Bayer as a Clinical Data Analyst to gain industry experience for clinical data science. 
+            Here I combined my clinical health industry experience with my skills as a developer.
             I am looking forward to what comes next, so please don't hesitate to reach out!
         """)
 
