@@ -7,7 +7,6 @@ from plots import education_plot, experience_plot
 
 def main():
     show_sidebar()
-    st.title("Michael Racanelli")
     tab1, tab2 = st.tabs(["Home", "Projects"])
 
     with tab1:
