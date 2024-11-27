@@ -4,7 +4,6 @@ import plotly.express as px
 
 from sidebar import show_sidebar
 from plots import education_plot, experience_plot
-# from chatgpt import chat_gpt
 
 def main():
     show_sidebar()
