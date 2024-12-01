@@ -26,6 +26,12 @@ def main():
         col1, col2, col3, col4= st.columns(4)
 
         with col1:
+            st.subheader("Collaboration")
+            st.write("- Git/GitHub")
+            st.write("- Agile Development")
+            st.write("- Devops")
+
+        with col2:
             st.subheader("Data Management")
             st.write("- Jupyter Notebooks")
             st.write("- Pandas")
@@ -33,14 +39,14 @@ def main():
             st.write("- Databricks")
             st.write("- Azure Data Factory")
 
-        with col2:
+        with col3:
             st.subheader("Interactive Dashboards")
             st.write("- PowerBI")
             st.write("- Shiny")
             st.write("- Streamlit")
             st.write("- Panel")
 
-        with col3:
+        with col4:
             st.subheader("Machine Learning")
             st.write("- Regression, Classification, Clustering")
             st.write("- Scikit-Learn")
@@ -48,11 +54,6 @@ def main():
             st.write("- Keras")
             st.write("- LLM api integration")
 
-        with col4:
-            st.subheader("Collaboration")
-            st.write("- Git/GitHub")
-            st.write("- Agile Development")
-            st.write("- Devops")
 
         st.header("Education")
         education_plot()
