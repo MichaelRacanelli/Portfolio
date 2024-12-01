@@ -26,10 +26,10 @@ def main():
         col1, col2, col3, col4= st.columns(4)
 
         with col1:
-            st.subheader("Collaboration")
+            st.subheader("Languages / Development")
+            st.write("- Python, R, SAS")
             st.write("- Git/GitHub")
-            st.write("- Agile Development")
-            st.write("- Devops")
+            st.write("- Agile/DevOps")
 
         with col2:
             st.subheader("Data Management")
