@@ -23,24 +23,36 @@ def main():
 
 
         st.header("Skills")
-        col1, col2 = st.columns(2)
+        col1, col2, col3, col4= st.columns(4)
 
         with col1:
-            st.subheader("Technical Skills")
-            st.write("- Python, R")
-            st.write("- Data Cleaning and Preprocessing")
-            st.write("- Exploratory Data Analysis (EDA)")
-            st.write("- Machine Learning: Regression, Classification, Clustering")
-            st.write("- Data Visualization: Matplotlib, Seaborn, Bokeh, Plotly")
+            st.subheader("Data Management")
+            st.write("- Jupyter Notebooks")
+            st.write("- Pandas")
+            st.write("- Pyspark")
+            st.write("- Databricks")
+            st.write("- Azure Data Factory")
 
         with col2:
-            st.subheader("Tools and Frameworks")
-            st.write("- Pandas, NumPy, Scikit-Learn, TensorFlow, Spark")
-            st.write("- Jupyter Notebooks")
-            st.write("- SQL, MongoDB")
-            st.write("- Git, GitHub")
-            st.write("- Streamlit, Panel, Flask")
+            st.subheader("Interactive Dashboards")
+            st.write("- PowerBI")
+            st.write("- Shiny")
+            st.write("- Streamlit")
+            st.write("- Panel")
 
+        with col3:
+            st.subheader("Machine Learning")
+            st.write("- Regression, Classification, Clustering")
+            st.write("- Scikit-Learn")
+            st.write("- TensorFlow")
+            st.write("- Keras")
+            st.write("- LLM api integration")
+
+        with col4:
+            st.subheader("Collaboration")
+            st.write("- Git/GitHub")
+            st.write("- Agile Development")
+            st.write("- Devops")
 
         st.header("Education")
         education_plot()
@@ -67,7 +79,7 @@ def main():
 
         st.header("Interests")
         st.markdown("- Machine Learning: Passionate about how deep learning with big data is changing every industry")
-        st.markdown("- Rock Climbing: Current best grades are V6 on bouldering and 12 on top-rope")
+        st.markdown("- Rock Climbing: Current best grade is V6 in bouldering")
         st.markdown("- Building Computers: Built multiple high-performance personal computers with extensive knowledge of consumer and professional products including Intel, AMD, NVIDIA, and custom water-cooling")
         st.markdown("- Music Performance: Saxophone section-leader in Loyola High School concert and jazz bands, Award-winning pianist and multi-instrumentalist")
 
