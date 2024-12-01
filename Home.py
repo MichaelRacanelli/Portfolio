@@ -26,7 +26,7 @@ def main():
         col1, col2, col3, col4= st.columns(4)
 
         with col1:
-            st.subheader("Languages / Development")
+            st.subheader("Languages & Development")
             st.write("- Python, R, SAS")
             st.write("- Git/GitHub")
             st.write("- Agile/DevOps")
