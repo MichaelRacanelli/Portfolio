@@ -33,7 +33,6 @@ def main():
 
         with col2:
             st.subheader("Data Management")
-            st.write("- Jupyter Notebooks")
             st.write("- Pandas")
             st.write("- Pyspark")
             st.write("- Databricks")
@@ -49,9 +48,7 @@ def main():
         with col4:
             st.subheader("Machine Learning")
             st.write("- Regression, Classification, Clustering")
-            st.write("- Scikit-Learn")
-            st.write("- TensorFlow")
-            st.write("- Keras")
+            st.write("- Scikit-Learn, TensorFlow, Keras")
             st.write("- LLM api integration")
 
 
