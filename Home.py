@@ -18,7 +18,7 @@ def main():
 
             Afterwards, I enrolled and completed a Data Science Certificate Program at the University of Toronto School of Continuing Studies. 
             In parallel, I joined Bayer as a Clinical Data Analyst to gain industry experience for clinical data science. 
-            Here I leverage my clinical health knowledge and industry experience along with my skills as a data science developer to transform data, create tools/visualizations, and answer questions.            
+            Here I leverage my clinical health knowledge and industry experience along with my skills as a data science developer to transform data, create tools/visualizations, and solve problems.            
         """)
 
 
@@ -41,9 +41,8 @@ def main():
         with col3:
             st.subheader("Interactive Dashboards")
             st.write("- PowerBI")
-            st.write("- Shiny")
-            st.write("- Streamlit")
-            st.write("- Panel")
+            st.write("- Shiny, Streamlit")
+            st.write("- Bokeh, Plotly")
 
         with col4:
             st.subheader("Machine Learning")
@@ -76,10 +75,8 @@ def main():
 
 
         st.header("Interests")
-        st.markdown("- Machine Learning: Passionate about how deep learning with big data is changing every industry")
         st.markdown("- Rock Climbing: Current best grade is V6 in bouldering")
         st.markdown("- Building Computers: Built multiple high-performance personal computers with extensive knowledge of consumer and professional products including Intel, AMD, NVIDIA, and custom water-cooling")
-        st.markdown("- Music Performance: Saxophone section-leader in Loyola High School concert and jazz bands, Award-winning pianist and multi-instrumentalist")
 
     with tab2:
         st.title("Applications")

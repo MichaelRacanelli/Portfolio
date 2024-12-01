@@ -107,7 +107,7 @@ def education_plot():
         category_orders={"Title": legend_order[::-1]},  # Set the order of legend items in reverse
     )
     # Adjust the legend position
-    fig.update_layout(legend=dict(x=-0.2, y=-0.2, traceorder='normal', orientation='h'))
+    fig.update_layout(legend=dict(x=-0.2, y=1.8, traceorder='reversed', orientation='h'))
     # Customize the layout
     fig.update_layout(xaxis_title="Year")
     # Customize x-axis date ticks
@@ -247,7 +247,7 @@ def experience_plot():
 
     # Customize the layout
     fig.update_layout(xaxis_title="Year")
-    fig.update_layout(legend=dict(x=-0.2, y=-0.2, traceorder='normal', orientation='h'))
+    fig.update_layout(legend=dict(x=-0.2, y=1.5, traceorder='reversed', orientation='h'))
     # Customize x-axis date ticks
     fig.update_xaxes(
         dtick="M24",  # Set tick interval to every 12 months (1 year)
