@@ -12,14 +12,10 @@ def main():
     with tab1:
         st.title("About Me")
         st.write("""
-            I completed a Master's of Science in Physiology and Pharmacology, specializing in fibrotic disease and melanoma metastasis. 
-            Afterwards, I gained industry experience managing Phase 4 clinical studies. 
-            Then I pursued development, learning to code in python and practiced machine learning, specializing in clinical data. 
-
-            Afterwards, I enrolled and completed a Data Science Certificate Program at the University of Toronto School of Continuing Studies. 
-            In parallel, I joined Bayer as a Clinical Data Analyst to gain industry experience for clinical data science. 
-            Here I leverage my clinical health knowledge and industry experience along with my skills as a data science developer to transform data, create tools/visualizations, and solve problems.            
-        """)
+            Published Medical Scientist and certified Data Scientist with two years experience working as a member of a global oncology clinical data analytic team for a major pharmaceutical corporation. 
+            Years of experience working in other pharmaceutical functions including Clinical Research, Medical Affairs and Clinical Data Analytics. 
+            Strong translational skills to unify medical domain knowledge with developer operations and communication skills to convey complex concepts to a broad audience.            
+            """)
 
 
         st.header("Skills")
