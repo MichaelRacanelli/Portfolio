@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from dateutil.relativedelta import relativedelta
+from datetime import date
 
 def education_plot():
     # data for education
@@ -143,7 +144,7 @@ def experience_plot():
             "Job Title": "Clinical Data Analyst",
             "Employment Type": "Contract Full-time",
             "Start Date": "2023-04",
-            "End Date": "2025-04",
+            "End Date": date.today().strftime("%Y-%m-%d"),
             "Company": "Bayer Inc",
             "Location": "Mississauga, Ontario",
         },
