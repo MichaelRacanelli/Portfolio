@@ -144,7 +144,7 @@ def experience_plot():
             "Job Title": "Clinical Data Analyst",
             "Employment Type": "Contract Full-time",
             "Start Date": "2023-04",
-            "End Date": date.today().strftime("%Y-%m-%d"),
+            "End Date": date.today().strftime("%Y-%m"),
             "Company": "Bayer Inc",
             "Location": "Mississauga, Ontario",
         },
@@ -217,15 +217,19 @@ def experience_plot():
     # Convert the data to a Pandas DataFrame
     df_work_experience = pd.DataFrame(work_experience_data)
 
-    # Convert 'Start Date' and 'End Date' columns to datetime
-    df_work_experience["Start Date"] = pd.to_datetime(df_work_experience["Start Date"], errors='coerce').dt.date
-    df_work_experience["End Date"] = pd.to_datetime(df_work_experience["End Date"], errors='coerce').dt.date  # 'coerce' handles the 'present' case
+    # Convert 'Start Date' and 'End Date' columns to datetime (keep as datetime, not date)
+    df_work_experience["Start Date"] = pd.to_datetime(df_work_experience["Start Date"], errors='coerce')
+    df_work_experience["End Date"] = pd.to_datetime(df_work_experience["End Date"], errors='coerce')  # 'coerce' handles the 'present' case
     
     df_work_experience.sort_values('End Date', ascending=False, inplace=True)
     df_work_experience.reset_index(drop=True,inplace=True)
 
     # Calculate duration in years, months, and days
     df_work_experience['Duration'] = df_work_experience.apply(lambda row: relativedelta(row['End Date'], row['Start Date']), axis=1)
+    
+    # Convert Start Date and End Date to date objects for display
+    df_work_experience["Start Date"] = df_work_experience["Start Date"].dt.date
+    df_work_experience["End Date"] = df_work_experience["End Date"].dt.date
 
     # Create a new column to represent the duration
     df_work_experience['Duration'] = df_work_experience['Duration'].apply(lambda x: (
