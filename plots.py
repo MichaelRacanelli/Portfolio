@@ -144,7 +144,7 @@ def experience_plot():
             "Job Title": "Clinical Data Analyst",
             "Employment Type": "Contract Full-time",
             "Start Date": "2023-04",
-            "End Date": date.today().strftime("%Y-%m-%d"),
+            "End Date": "2026-04",
             "Company": "Bayer Inc",
             "Location": "Mississauga, Ontario",
         },
