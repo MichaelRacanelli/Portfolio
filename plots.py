@@ -224,8 +224,11 @@ def experience_plot():
     df_work_experience.sort_values('End Date', ascending=False, inplace=True)
     df_work_experience.reset_index(drop=True,inplace=True)
 
-    # Calculate duration in years, months, and days
-    df_work_experience['Duration'] = df_work_experience.apply(lambda row: relativedelta(row['End Date'], row['Start Date']), axis=1)
+    # Calculate duration in years, months, and days (ensure datetime objects are used)
+    df_work_experience['Duration'] = df_work_experience.apply(
+        lambda row: relativedelta(row['End Date'].to_pydatetime(), row['Start Date'].to_pydatetime()), 
+        axis=1
+    )
     
     # Convert Start Date and End Date to date objects for display
     df_work_experience["Start Date"] = df_work_experience["Start Date"].dt.date
