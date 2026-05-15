@@ -129,7 +129,7 @@ def education_plot():
         tickformat="%Y",  # Format the tick labels as year only
     )
     # display education plot 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     # Button to show/hide details
     if st.button("Show Details", key='education'):
         # Display the DataFrame as a table
@@ -294,7 +294,7 @@ def experience_plot():
         tickformat="%Y",  # Format the tick labels as year only
     )
     # display experience plot
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     if st.button("Show Details", key='experience'):
         # Display the DataFrame as a table
         st.button("Hide",key='clear_experience')

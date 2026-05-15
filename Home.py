@@ -17,6 +17,7 @@ def main():
             Strong translational skills to unify medical domain knowledge with developer operations and communication skills to convey complex concepts to a broad audience.
             Completed Data Science Certificate Program with the University of Toronto and the University of Waterloo. Then applied that knowledge as part of the Bayer Global Oncology Clinical Analytics team.
             Gained experience working with large clinical trial datasets, preparing and transforming data for analysis, and working with stakeholders to deliver impactful insights through interactive dashboards and reports.
+            Now I'm currently working at Roche, using data science programming to provide the required data analysis for approval and maintainence of drug therapies.
             """)
 
 
@@ -46,7 +47,7 @@ def main():
             st.subheader("Machine Learning")
             st.write("- Regression, Classification, Clustering")
             st.write("- Scikit-Learn, TensorFlow, Keras")
-            st.write("- LLM api integration")
+            st.write("- LLM API integration")
 
 
         st.header("Education")
@@ -97,7 +98,7 @@ def main():
             st.markdown('[Application link]')
             st.markdown('[Github Repository](https://github.com/MichaelRacanelli/SongRecommendation)')
         with col3:
-            st.image("./images/spotify.jpg", use_column_width=True) 
+            st.image("./images/spotify.jpg", width='stretch') 
 
         st.title('Notebooks')
 
@@ -115,7 +116,7 @@ def main():
             st.markdown('[Kaggle Workbook](https://www.kaggle.com/code/michaelracanelli/heart-disease-risk-factor-analysis-and-nn)')
             st.markdown('[Github Repository](https://github.com/MichaelRacanelli/Heart_Disease)')
         # with col3:
-        #     st.image("", use_column_width=True)
+        #     st.image("", width='stretch')
 
         st.header("Lung Cancer and Smoking: Predictive Modeling")
         st.subheader('Description')
@@ -131,6 +132,6 @@ def main():
             st.markdown('[Kaggle Workbook](https://www.kaggle.com/code/michaelracanelli/lung-cancer-and-smoking-predictive-modeling)')
             st.markdown('[Github Repository](https://github.com/MichaelRacanelli/Lung_Cancer)')
         # with col3:
-        #     st.image("", use_column_width=True)
+        #     st.image("", width='stretch')
 if __name__ == "__main__":
     main()
